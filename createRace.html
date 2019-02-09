@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>5e Builder</title>
+	<script type="text/javascript" src="loadDir.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1>Character Creation</h1>
+    </header>
+	<select id="races">
+	</select>
+	<div id="traits"></div>
+	<script>
+		//Populate the race drop down menu
+		var scroll = document.getElementById("races");
+		var raceList = loadDir("./races");
+		for ( var i = 0; i < raceList.length;i++){
+			var cur = document.createElement('option')
+			cur.value = raceList[i].race_name
+			cur.innerHTML = raceList[i].race_name
+			scroll.appendChild(cur)
+		}
+	</script>
+	<button style="background:blue; color:white"  id="raceDone" onclick="createHome.html" > Done </button> <br>
+  </body>
+</html>
