@@ -11,7 +11,7 @@
     "5e"
   ],
   "author": "Anthony and Reece",
-  "license": "MIT License",
+  "license": "MIT ",
   "devDependencies": {
     "electron": "^4.0.3"
   }
