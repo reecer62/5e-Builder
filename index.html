@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <title>5e Builder</title>
-	<script type="text/javascript" src="loadDir.js"></script>
+  <script type="text/javascript" src="loadDir.js"></script>
+  <script type="text/javascript" src="parseChars.js"></script>
   </head>
   <body>
 
@@ -16,21 +17,15 @@
       <button>New Character</button>
     </section>
 
-    <div id="characters">
-		<script>
-			var test = loadDir("./characters")
-		</script>
-      <!--
-		<section>
-        <h1>Name 1</h1>
-        <p>Character Stats Here</p>
-      </section>
-      <section>
-        <h1>Name 2</h1>
-        <p>Character Stats Here</p>
-      </section> 
-	-->
-    </div>
+    <nav id="charNav">
+      <ul id="charList">
+        <script>
+            var characters = loadDir("./characters")
+            parseChars(characters)
+        </script>
+        <!-- Characters rendered to this list -->
+      </ul>
+    </nav>
 
     <script>
       // You can also require other files to run in this process
