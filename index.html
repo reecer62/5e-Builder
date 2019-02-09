@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>5e Builder</title>
+	<script type="text/javascript" src="loadDir.js"></script>
   </head>
   <body>
 
@@ -16,14 +17,19 @@
     </section>
 
     <div id="characters">
-      <section>
+		<script>
+			var test = loadDir("./characters")
+		</script>
+      <!--
+		<section>
         <h1>Name 1</h1>
         <p>Character Stats Here</p>
       </section>
       <section>
         <h1>Name 2</h1>
         <p>Character Stats Here</p>
-      </section>
+      </section> 
+	-->
     </div>
 
     <script>
