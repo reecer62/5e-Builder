@@ -1,0 +1,1 @@
+{"name": "test1", "race":"elf", "class": [{ "level" : "7", "class": "warlock"}], "strength":"10", "dexterity":"10", "constitution":"10", "intelliligence":"10", "wisdom":"10", "charisma":"10", "feats" : [], "spells": [], "sSlots" : [ {"level":"1", "total":"7","used":"0"} ], "proficiencies": [] }
