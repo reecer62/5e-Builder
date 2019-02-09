@@ -1,1 +1,34 @@
 /* Styles for the mainpage */
+body {
+    padding: 1.0rem;
+    font-size: 16px;
+    background-image: url("../img/oldPaper.jpg");
+    background-repeat: no-repeat;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(95, 76, 29);
+    text-align: center;
+}
+
+p {
+    margin-bottom: .67em;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header > p {
+    padding: 1.0em;
+}
+
+#main section {
+    margin: 1.0em;
+    margin-bottom: 2.0em;
+}
+
+h1, h2, p {
+    font-family: 'UnifrakturCook', cursive;
+}
