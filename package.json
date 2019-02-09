@@ -1,21 +1,17 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "5e-Tools",
+  "version": "0.5.0",
+  "description": "A tool for creating and maintaining 5e character sheets",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/reecer62/5e-Builder",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+	"5e"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Anthony and Reece",
+  "license": "MIT License",
   "devDependencies": {
     "electron": "^4.0.3"
   }
