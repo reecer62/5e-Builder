@@ -28,3 +28,7 @@ header > p {
     margin: 1.0em;
     margin-bottom: 2.0em;
 }
+
+h1, h2, p {
+    font-family: 'UnifrakturCook', cursive;
+}
