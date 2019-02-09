@@ -1,0 +1,35 @@
+
+{
+	"race_name": "mountain dwarf",
+	"ability_score_increase": [
+		"strength": "+2",
+		"dexterity": "+0",
+		"constitution": "+2",
+		"intelligence": "+0",
+		"wisdom": "+0",
+		"charisma": "+0"
+	],
+	"darkvision_distance": "60 feet",
+	"size": "medium",
+	"speed": "25",
+	"weapon_proficiencies": [
+		"battle_axe",
+		"handaxe",
+		"throwing_hammer",
+		"warhammer"
+	],
+	"armor_proficiencies": [
+		"light": "True",
+		"medium": "True",
+		"heavy": "False"
+	],
+	"feats": [
+		"Dwarven Resilience.": "You have advantage on saving throws against poison, and you have resistance against poison damage",
+		"Stonecunning": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+	],
+	"tool_proficiency": "one of your choice from smith's tools, brewer's supplies, or mason's tools.",
+	"languages": [
+		"dwarvish",
+		"common"
+	]
+}
