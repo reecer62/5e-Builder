@@ -1,13 +1,13 @@
 
 {
-	"race_name": "mountain dwarf",
+	"race_name": "hill dwarf",
 	"ability_score_increase": [
-		"strength": "+0",
-		"dexterity": "+0",
-		"constitution": "+2",
-		"intelligence": "+0",
-		"wisdom": "+1",
-		"charisma": "+0"
+		{"stat":"strength","mod": "+0"},
+		{"stat":"dexterity","mod": "+0"},
+		{"stat":"constitution","mod": "+2"},
+		{"stat":"intelligence","mod": "+0"},
+		{"stat":"wisdom","mod": "+1"},
+		{"stat":"charisma","mod": "+0"}
 	],
 	"darkvision_distance": "60 feet",
 	"size": "medium",
@@ -19,14 +19,14 @@
 		"warhammer"
 	],
 	"armor_proficiencies": [
-		"light": "False",
-		"medium": "False",
-		"heavy": "False"
+		"light",
+		"medium",
+		"heavy"
 	],
 	"feats": [
-		"Dwarven Resilience.": "You have advantage on saving throws against poison, and you have resistance against poison damage",
-		"Stonecunning": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.",
-		"Dwarven Toughness.": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+		{"feat":"Dwarven Resilience.","description": "You have advantage on saving throws against poison, and you have resistance against poison damage"},
+		{"feat":"Stonecunning","description": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."},
+		{"feat":"Dwarven Toughness.","description": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."}
 	],
 	"tool_proficiency": "one of your choice from smith's tools, brewer's supplies, or mason's tools.",
 	"languages": [

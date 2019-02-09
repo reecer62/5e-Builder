@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <title>5e Builder</title>
 	<script type="text/javascript" src="loadDir.js"></script>
+	<script>
+		function jump(loc) {
+			document.location.href = loc;
+	
+		}
+	</script>
   </head>
   <body>
 
     <header>
       <h1>Character Creattion</h1>
     </header>
-	<button style="background:blue; color:white" id="makeRace" > Race </button> <br>
+	<button style="background:blue; color:white" id="makeRace" onclick='jump("createRace.html")' > Race </button> <br>
 	<button style="background:blue; color:white"  id="makeClass"> Class </button> <br>
 	<button style="background:blue; color:white"  id="makeScores"> Abillity Scores </button> <br>
 	<button style="background:blue; color:white"  id="makeDesciption"> Description </button> <br>
