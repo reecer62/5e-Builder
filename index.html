@@ -16,19 +16,23 @@
       <p>This character creation tool is designed to create, update, and maintain characters for Dungeons and Dragons 5th Edition.</p>
     </header>
 
-    <section id="createChar">
-      <button onclick="window.location.href='createHome.html'">New Character</button>
-    </section>
-
-    <nav id="charNav">
-      <ul id="charList">
-        <script>
-            var characters = loadDir("./characters")
-            parseChars(characters)
-        </script>
-        <!-- Characters rendered to this list -->
-      </ul>
-    </nav>
+    <div id="main">
+      <section id="createChar">
+          <h2>Create a Character</h2>
+          <p>To begin creating a character, press the button below.</p>
+          <button onclick="window.location.href='createHome.html'">New Character</button>
+        </section>
+    
+        <nav id="charNav">
+          <ul id="charList">
+            <script>
+                var characters = loadDir("./characters")
+                parseChars(characters)
+            </script>
+            <!-- Characters rendered to this list -->
+          </ul>
+        </nav>
+    </div>
 
     <script>
       // You can also require other files to run in this process
