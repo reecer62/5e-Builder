@@ -1,2 +1,2 @@
 # 5e-Builder
-An Electron application for building D&amp;D characters for 5th Edition.
+An Electron application to help build D&amp;D characters for the 5th Edition.
