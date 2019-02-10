@@ -4,8 +4,8 @@ function parseChars(characters) {
     for (let i = 0; i < characters.length; i++) {
         var charString = ""
         var character = characters[i]
-        var charName = character.name
-        charString += "Name: " + charName + " Classes: "
+        var charName = character.name + " "
+        charString += "Class: "
         var charClasses = character.class
         for (let i = 0; i < charClasses.length; i++) {
             var charClass = charClasses[i]
@@ -20,6 +20,9 @@ function parseChars(characters) {
         console.log(charString)
         // Append to list element character attributes and render to character list
         var listNode = document.createElement("li")
+        var spanNode = document.createElement("span")
+        spanNode.textContent = charName
+        spanNode.setAttribute("class", "char-name")
         var linkNode = document.createElement("a")
         linkNode.href = "#"
         linkNode.innerHTML = charString
@@ -27,6 +30,7 @@ function parseChars(characters) {
         linkNode.addEventListener("click", function () {
             localStorage.setItem('charIndex', i)
         })
+        listNode.append(spanNode)
         listNode.append(linkNode)
         charList.append(listNode)
     }
