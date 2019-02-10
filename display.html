@@ -18,8 +18,8 @@
     <h1 id="pname"></h1>
 	<!-- This is the area that tells us about them -->
 	 <span id="race"> </span>
-	 <span id="class"> </span>
-	<h2> Stats and Modifiers </h2>
+	 <span id="class"> </span> <br>
+	<h1> Stats and Modifiers </h1>
 	<table style="width:100%">
 		<tr>
 			<th> Strength </th>
@@ -37,6 +37,21 @@
 			<th id="wis"> </th>
 			<th id="cha"> </th>
 		</tr>
+	</table>
+	<h1> Proficencies </h1>
+	<div id="profbox"> </div> <br>
+	<h1> Languages </h1>
+	<div id="langbox"> </div> <br>
+	<h1> Feats </h1>
+	<div id="feats"> </div> <br>
+	<h1>Inventory> </h1>
+	<table id="inventory" style="width100%"> 
+	<tr>
+		<th> Item </th>
+		<th> Cost </th>
+		<th> Effect </th>
+	</tr>
+	</table>
 		<script>
 			var chList = loadDir("./characters")
 			var sel = localStorage.getItem('charIndex')
