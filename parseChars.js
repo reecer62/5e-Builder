@@ -23,6 +23,10 @@ function parseChars(characters) {
         var linkNode = document.createElement("a")
         linkNode.href = "#"
         linkNode.innerHTML = charString
+        // Add localStorage value to store what character was selected
+        linkNode.addEventListener("click", function () {
+            localStorage.setItem('charIndex', i)
+        })
         listNode.append(linkNode)
         charList.append(listNode)
     }
