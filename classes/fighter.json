@@ -1,0 +1,59 @@
+
+{
+	"class_name": "fighter",
+	"hit_die": "d10",
+	"armor_proficiencies": [
+		{"light": "True"},
+		{"medium": "True"},
+		{"heavy": "True"},
+		{"shields": "True"}
+	],
+	"weapon_proficiencies": [
+		{"simple": "True"},
+		{"martial": "True"},
+		{"other": [
+		]}
+	],
+	"tool_proficiencies": [
+	],
+	"saving_throws": [
+		"strength",
+		"constitution"
+	],
+	"number_of_skills": "2",
+	"skill options": [
+		"acrobatics",
+		"animal_handling",
+		"athletics",
+		"history",
+		"insight",
+		"intimidation",
+		"perception",
+		"survival"
+	],
+	"class_features": [
+		{"feature": "fighting_style",
+			"description": "You adopt a particular style of fighting as your specialty. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.",	
+			"options": [
+				{"feat": "Archery", "description": "You gain a +2 bonus to attack rolls you make with ranged weapons."},
+				{"feat": "Defense", "description": "While you are wearing armor, you gain a +1 bonus to AC."},
+				{"feat": "Dueling", "description": "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon."},
+				{"feat": "Great Weapon Fighting", "description": "When you roll a 1or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapoo must have the two-handed or versatile property for you to gaio this benefit."},
+				{"feat": "Protection", "description": "When a creature you can see attacks a target other than you that is within 5 feet of YOtl,you can use your reaction to impose disadvantage on the attack roll. Vou must be wielding a shield."},
+				{"feat": "Two-Weapon Fighting", "description": "When you engage in two-weapon fighting, you can add your ability modifier to the damage of lhe second attack."}
+			],
+			"level": "1",
+			"subclass": "all"
+		},
+		{"feature": "second_wind",
+			"description": "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.",
+			"level": "1",
+			"subclass": "all"
+		},
+		{"feature": "action_surge",
+			"description": "Starting at 2nd leveI, Yotlcan push yourself beyond yotlr normallimits for a momento On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th levei, you can use it twice before a rest, but only once on the same turn.",
+			"level": "2",
+			"subclass": "all"
+		}
+	]
+}
