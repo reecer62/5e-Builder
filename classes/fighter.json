@@ -13,13 +13,14 @@
 		]}
 	],
 	"tool_proficiencies": [
+		"stick"
 	],
 	"saving_throws": [
 		"strength",
 		"constitution"
 	],
-	"number_of_skills": "2",
-	"skill options": [
+	"number_of_skills": "1",
+	"skill_options": [
 		"acrobatics",
 		"animal_handling",
 		"athletics",

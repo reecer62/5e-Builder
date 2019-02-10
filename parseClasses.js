@@ -1,6 +1,6 @@
 function parseClasses (classes) {
     var classList = document.getElementById("classList")
-    
+
     // Add class names as options in the dropdown menu
     for (let i = 0; i < classes.length; i++) {
         var option = document.createElement("option")
@@ -37,20 +37,100 @@ function parseClasses (classes) {
         infoSection.append(hitDie)
 
         // Armor
-        var armorProfHeader = document.createElement("h4")
-        armorProfHeader.textContent = "Armor Proficiencies"
-        var armorProfObj = clas.armor_proficiencies
-        var armorProficiencies = makeProfList(armorProfObj)
-        infoSection.append(armorProfHeader)
-        infoSection.append(armorProficiencies)
+        if (clas.armor_proficiencies.length > 0) {
+            var armorProfHeader = document.createElement("h4")
+            armorProfHeader.textContent = "Armor Proficiencies"
+            var armorProfObj = clas.armor_proficiencies
+            var armorProficiencies = makeProfList(armorProfObj)
+            infoSection.append(armorProfHeader)
+            infoSection.append(armorProficiencies)
+        }
+        
 
         // Weapons
-        var weaponProfHeader = document.createElement("h4")
-        weaponProfHeader.textContent = "Weapon Proficiencies"
-        var weaponProfObj = clas.weapon_proficiencies
-        var weaponProficiencies = makeProfList(weaponProfObj)
-        infoSection.append(weaponProfHeader)
-        infoSection.append(weaponProficiencies)
+        if (clas.weapon_proficiencies.length > 0) {
+            var weaponProfHeader = document.createElement("h4")
+            weaponProfHeader.textContent = "Weapon Proficiencies"
+            var weaponProfObj = clas.weapon_proficiencies
+            var weaponProficiencies = makeProfList(weaponProfObj)
+            infoSection.append(weaponProfHeader)
+            infoSection.append(weaponProficiencies)            
+        }
+
+        // Tools
+        if (clas.tool_proficiencies.length > 0) {
+            var toolProfHeader = document.createElement("h4")
+            toolProfHeader.textContent = "Tool Proficiencies"
+            var toolProfObj = clas.tool_proficiencies
+            var toolProficiencies = makeProfAry(toolProfObj)
+            infoSection.append(toolProfHeader)
+            infoSection.append(toolProficiencies)               
+        }
+
+        // Saving Throws
+        if (clas.saving_throws.length > 0) {
+            var savThrowProfHeader = document.createElement("h4")
+            savThrowProfHeader.textContent = "Saving Throws"
+            var savThrowProfObj = clas.saving_throws
+            var savThrowProficiencies = makeProfAry(savThrowProfObj)
+            infoSection.append(savThrowProfHeader)
+            infoSection.append(savThrowProficiencies)               
+        }
+
+        // Skill Options
+        if (clas.number_of_skills > 0) {
+            var numSkillsSelected = 0
+
+            // Add headers
+            var skillsProfHeader = document.createElement("h4")
+            skillsProfHeader.textContent = "Skills"
+            infoSection.append(skillsProfHeader)
+            var skillProfDesc = document.createElement("p")
+            skillProfDesc.textContent = "Select " + clas.number_of_skills + " to be proficient in."
+            infoSection.append(skillProfDesc)
+
+            // Add checkboxes for each skill
+            for (let i = 0; i < clas.skill_options.length; i++) {
+                var skillBox = document.createElement("input")
+                skillBox.type = "checkbox"
+                skillBox.name = clas.skill_options[i]
+                skillBox.value = clas.skill_options[i]
+                skillBox.id = clas.skill_options[i]
+
+                var skillLabel = document.createElement("label")
+                skillLabel.htmlFor = clas.skill_options[i]
+                skillLabel.appendChild(document.createTextNode(clas.skill_options[i]))
+
+                skillBox.addEventListener("change", function () {
+                    if (this.checked && (numSkillsSelected < clas.number_of_skills)) {
+                        numSkillsSelected++
+                        skillProfDesc.innerHTML = "Select " + (clas.number_of_skills - numSkillsSelected) + " to be proficient in."
+                    } else if (!this.checked && (numSkillsSelected > 0)) {
+                        numSkillsSelected--
+                        skillProfDesc.innerHTML = "Select " + (clas.number_of_skills - numSkillsSelected) + " to be proficient in."
+                    }
+                    if (numSkillsSelected == clas.number_of_skills) {
+                        var checkboxes = document.querySelectorAll('input[type=checkbox]')
+                        for (let i = 0; i < checkboxes.length; i++) {
+                            if (checkboxes[i].checked != true) {
+                                checkboxes[i].setAttribute("disabled", "disabled") 
+                            }
+                        }
+                    } else {
+                        var checkboxes = document.querySelectorAll('input[type=checkbox]')
+                        for (let i = 0; i < checkboxes.length; i++) {
+                            if (checkboxes[i].checked == false) {
+                                checkboxes[i].removeAttribute("disabled") 
+                            }
+                        }
+                    }
+                })
+
+                infoSection.append(skillBox)
+                infoSection.append(skillLabel)
+            }
+        }
+
     })
 }
 
@@ -65,6 +145,16 @@ function makeProfList(profObj) {
             profItem.appendChild(document.createTextNode(keyName))
             objProficiencies.appendChild(profItem)
         }
+    }
+    return objProficiencies
+}
+
+function makeProfAry(profObj) {
+    var objProficiencies = document.createElement("ul")
+    for (let i = 0; i < profObj.length; i++) {
+        var profItem = document.createElement("li") 
+        profItem.appendChild(document.createTextNode(profObj[i]))
+        objProficiencies.appendChild(profItem)
     }
     return objProficiencies
 }
