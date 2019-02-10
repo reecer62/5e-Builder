@@ -140,25 +140,31 @@ function parseClasses (classes) {
         for (let i = 0; i < featuresObj.length; i++) {
             var hasOptions = featuresObj[i].options || 0
             if (hasOptions != 0) {
-                // console.log(featuresObj[i]) 
+                var featureSection = makeFeatureSection(featuresObj[i])
+                // Feature Options
+                var optionsHeader = document.createElement("h4")
+                optionsHeader.textContent = "Options"
+                featureSection.appendChild(optionsHeader)
+                var optionsList = document.createElement("ul")
+                var options = featuresObj[i].options
+                for (let i = 0; i < options.length; i++) {
+                    var featItem = document.createElement("li")
+                    // Feat header
+                    var featHeader = document.createElement("h4")
+                    featHeader.textContent = "Feature: " + options[i].feat
+                    featItem.appendChild(featHeader)
+                    // Feat description
+                    var featDesc = document.createElement("p")
+                    featDesc.textContent = options[i].description
+                    featItem.appendChild(featDesc)
+                    
+                    optionsList.appendChild(featItem)
+                }
+                // Append feature info to feature list
+                featureSection.append(optionsList)
+                featureList.appendChild(featureSection)
             } else {
-                var featureSection = document.createElement("li")
-                // Feature name
-                var featHeader = document.createElement("h4")
-                featHeader.textContent = "Feature: " + featuresObj[i].feature
-                featureSection.appendChild(featHeader)
-                // Feature description
-                var featDesc = document.createElement("p")
-                featDesc.textContent = featuresObj[i].description
-                featureSection.appendChild(featDesc)
-                // Feature level
-                var featLevel = document.createElement("p")
-                featLevel.textContent = "Level: " + featuresObj[i].level
-                featureSection.appendChild(featLevel)
-                // Feature subclass
-                var featSubclass = document.createElement("p")
-                featSubclass.textContent = "Subclass: " + featuresObj[i].subclass
-                featureSection.append(featSubclass)
+                var featureSection = makeFeatureSection(featuresObj[i])
                 // Append feature info to feature list
                 featureList.appendChild(featureSection)
             }
@@ -191,4 +197,26 @@ function makeProfAry(profObj) {
         objProficiencies.appendChild(profItem)
     }
     return objProficiencies
+}
+
+function makeFeatureSection(featureObj) {
+    var featureSection = document.createElement("li")
+    // Feature name
+    var featHeader = document.createElement("h4")
+    featHeader.textContent = "Feature: " + featureObj.feature
+    featureSection.appendChild(featHeader)
+    // Feature description
+    var featDesc = document.createElement("p")
+    featDesc.textContent = featureObj.description
+    featureSection.appendChild(featDesc)
+    // Feature level
+    var featLevel = document.createElement("p")
+    featLevel.textContent = "Level: " + featureObj.level
+    featureSection.appendChild(featLevel)
+    // Feature subclass
+    var featSubclass = document.createElement("p")
+    featSubclass.textContent = "Subclass: " + featureObj.subclass
+    featureSection.append(featSubclass)
+    
+    return featureSection
 }
