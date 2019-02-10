@@ -24,7 +24,7 @@
 		"dexterity"
 	],
 	"number_of_skills": "2",
-	"skill options": [
+	"skill_options": [
 		"acrobatics",
 		"animal_handling",
 		"athletics",
