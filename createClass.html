@@ -9,14 +9,21 @@
     <script type="text/javascript" src="parseClasses.js"></script>
 </head>
 <body>
-    <aside>
+
+    <section id="class-menu">
         <h1>Select a Class</h1>
         <select name="classes" id="classList">
+            <option value="" selected disabled hidden>Choose Class</option>
             <script>
                 var classes = loadDir("./classes")
                 parseClasses(classes)
             </script>
         </select>
-    </aside>
+    </section>
+
+    <section id="class-info">
+        <h1>Class Information</h1>
+    </section>
+
 </body>
 </html>
