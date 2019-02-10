@@ -10,15 +10,19 @@
 		var plist;
 
 		function boxy(val){
-			console.log(val)
-			let mao = loadDir[sel].tool_proficiency
-			let funbox = 0
-			let cheks = document.getElementByTagName("input")
+			let mao = loadDir("./races")[sel].tool_proficiency
+			let funbox = 1
+			let cheks = document.getElementsByTagName("input")
+			plist =[]
 			for (var i =0;i<cheks.length;i++){
-				if ( funbox >= mao.num && !(mao.options[i] === val)){
+				if ( funbox >= mao.num && !(cheks[i].value === val)){
+					console.log("Uncheking " + cheks[i].value + " copares: " + val)
 					cheks[i].checked = false;
-				} else if (!(mao.options[i] === val)){
+				} else if (cheks[i].checked && !(cheks[i].value === val)){
+					plist.push(mao.options[i])
 					funbox++;
+				} else if (mao.options[i] === val){
+					plist.push(mao.options[i])
 				}
 			}
 			
@@ -66,13 +70,14 @@
 			for (var i =0; i< raceList[sel].tool_proficiency.options.length; i++){
 				let box = document.createElement('li')
 				let corpseweaver = document.createElement('input')
+				let ffs = raceList[sel].tool_proficiency.options[i]
 				corpseweaver.type = "checkbox"
 				corpseweaver.value = raceList[sel].tool_proficiency.options[i];
-				corpseweaver.onchange = 'boxy(raceList[sel].tool_proficiency.options[i])';
+				console.log(raceList[sel].tool_proficiency.options[i])
+				corpseweaver.onchange = function () {boxy(ffs)};
 				let orely = document.createTextNode(raceList[sel].tool_proficiency.options[i])
 				box.appendChild(orely)
 				box.appendChild(corpseweaver)
-				console.log(corpseweaver)
 				optList.appendChild(box);
 			}
 		
