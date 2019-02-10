@@ -55,3 +55,22 @@ a:hover, a:active {
     text-decoration: none;
     color: rgb(95, 76, 29);
 }
+
+button {
+    background-color: rgb(165, 131, 68);
+    border: none;
+    color: rgb(95, 76, 29);
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+h1, h2, h3, h4 {
+    text-transform: capitalize;
+}
