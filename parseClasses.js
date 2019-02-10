@@ -1,3 +1,4 @@
+var numSkillsRequired = 0
 function parseClasses (classes) {
     var classList = document.getElementById("classList")
 
@@ -88,6 +89,7 @@ function parseClasses (classes) {
             var skillProfDesc = document.createElement("p")
             skillProfDesc.textContent = "Select " + clas.number_of_skills + " to be proficient in."
             infoSection.append(skillProfDesc)
+            numSkillsRequired = clas.number_of_skills
 
             // Add checkboxes for each skill
             for (let i = 0; i < clas.skill_options.length; i++) {
@@ -157,7 +159,7 @@ function parseClasses (classes) {
                     var featDesc = document.createElement("p")
                     featDesc.textContent = options[i].description
                     featItem.appendChild(featDesc)
-                    
+
                     optionsList.appendChild(featItem)
                 }
                 // Append feature info to feature list
@@ -219,4 +221,26 @@ function makeFeatureSection(featureObj) {
     featureSection.append(featSubclass)
     
     return featureSection
+}
+
+function submitClass() {
+    var skillProfAry = []
+    var numChecked = 0
+    var checkboxes = document.querySelectorAll('input[type=checkbox]')
+    for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+            numChecked++
+            skillProfAry.push(checkboxes[i].value)
+        }
+    }
+    if (numChecked < numSkillsRequired) {
+        console.log("Please select skills to be proficient in.")
+    } else {
+        // Load necessary variables into localStorage
+        localStorage.setItem('skillProficiencies', skillProfAry)
+        localStorage.setItem('isDoneClass', true)
+        // Load back to character creation menu
+        document.location.href = "createHome.html"
+    }
+    console.log(skillProfAry)    
 }
