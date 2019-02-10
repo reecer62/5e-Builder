@@ -54,6 +54,59 @@
 			"description": "Starting at 2nd leveI, Yotlcan push yourself beyond yotlr normallimits for a momento On your turn, you can take one additional action on top of your regular action and a possible bonus action. Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th levei, you can use it twice before a rest, but only once on the same turn.",
 			"level": "2",
 			"subclass": "all"
+		},
+		{"feature": "martial_archtype",
+			"description": "At 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. Choose Champion, Battle Master, or Eldritch Knight, all detailed at the end of the c1ass description. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level",
+			"options": [
+				{"feat": "champion", "description": "gain access to features of the fighter's Champion subclass"},
+				{"feat": "battle_master", "description": "gain access to features of the fighter's Battle master subclass"},
+				{"feat": "eldrich_knight", "description": "gain access to the features of the fighter's Eldrich Knight subclass"}
+			],
+			"level": "3",
+			"subclass": "all"
+		},
+		{"feature": "ability_score_improvement",
+			"level": "4",
+			"subclass": "all"
+		},
+		{"feature": "ability_score_improvement",
+			"level": "6",
+			"subclass": "all"
+		},
+		{"feature": "ability_score_improvement",
+			"level": "8",
+			"subclass": "all"
+		},
+		{"feature": "ability_score_improvement",
+			"level": "12",
+			"subclass": "all"
+		},
+		{"feature": "ability_score_improvement",
+			"level": "14",
+			"subclass": "all"
+		},
+		{"feature": "ability_score_improvement",
+			"level": "16",
+			"subclass": "all"
+		},
+		{"feature": "ability_score_improvement",
+			"level": "19",
+			"subclass": "all"
+		},
+		{"feature": "extra_attack",
+			"description": "Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn. The number of attacks increases to three wheo you reach 11th level in this class and to four when you reach 20th level in this class",
+			"level": "5",
+			"subclass": "all"
+		},
+		{"feature": "indomitable",
+			"description": "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, You must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level.",
+			"level": "9",
+			"subclass": "all"
+		},
+		{"feature": "improved_critical",
+			"description": "Beginning when you choose this archetype at 3rd level, your weapon attacks score a critical hit on a roll of 19 or 20",
+			"level": "3",
+			"subclass": "champion"
 		}
 	]
 }
