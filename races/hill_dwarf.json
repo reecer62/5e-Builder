@@ -2,12 +2,8 @@
 {
 	"race_name": "hill dwarf",
 	"ability_score_increase": [
-		{"stat":"strength","mod": "+0"},
-		{"stat":"dexterity","mod": "+0"},
-		{"stat":"constitution","mod": "+2"},
-		{"stat":"intelligence","mod": "+0"},
-		{"stat":"wisdom","mod": "+1"},
-		{"stat":"charisma","mod": "+0"}
+		{"stat":"constitution","mod": "2"},
+		{"stat":"wisdom","mod": "1"}
 	],
 	"darkvision_distance": "60 feet",
 	"size": "medium",
@@ -28,7 +24,7 @@
 		{"feat":"Stonecunning","description": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."},
 		{"feat":"Dwarven Toughness.","description": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."}
 	],
-	"tool_proficiency": {"number":"1","options":["smiths tools", "brewers supplies", "mason's tools"],
+	"tool_proficiency": {"num":"1","options":["smiths tools", "brewers supplies", "mason's tools"]},
 	"languages": [
 		"dwarvish",
 		"common"

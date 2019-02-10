@@ -7,10 +7,83 @@
 	<script type="text/javascript" src="jump.js"></script>
 	<script>
 		var sel;
-		function raceSel() {
-			sel = document.getElementById("races").value
-			console.log(sel)
+		var plist;
 
+		function boxy(val){
+			let mao = loadDir("./races")[sel].tool_proficiency
+			let funbox = 1
+			let cheks = document.getElementsByTagName("input")
+			plist =[]
+			for (var i =0;i<cheks.length;i++){
+				if ( funbox >= mao.num && !(cheks[i].value === val)){
+					console.log("Uncheking " + cheks[i].value + " copares: " + val)
+					cheks[i].checked = false;
+				} else if (cheks[i].checked && !(cheks[i].value === val)){
+					plist.push(mao.options[i])
+					funbox++;
+				} else if (mao.options[i] === val){
+					plist.push(mao.options[i])
+				}
+			}
+			
+
+		}
+		function raceSel() {
+			var tmp = document.getElementById("races").value
+			var raceList = loadDir("./races");
+			var cur;
+			for ( var i =0; i< raceList.length; i++){
+				if ( tmp === raceList[i].race_name){
+					sel = i;
+					break;
+				}
+			}
+			
+			var statList = document.getElementById("stats")
+			//clear statlist
+			statList.innerHTML =''
+			for (var i =0; i< raceList[sel].ability_score_increase.length; i++){
+				let box = document.createElement('li')
+				box.appendChild(document.createTextNode(raceList[sel].ability_score_increase[i].stat + ":" + (raceList[sel].ability_score_increase[i].mod > 0? "+":"") + raceList[sel].ability_score_increase[i].mod))
+				statList.appendChild(box);
+			}
+
+
+	
+			var profList = document.getElementById("prof")
+			//clear statlist
+			profList.innerHTML =''
+			for (var i =0; i< raceList[sel].weapon_proficiencies.length; i++){
+				let box = document.createElement('li')
+				box.appendChild(document.createTextNode(raceList[sel].weapon_proficiencies[i]))
+				profList.appendChild(box);
+			}
+			for (var i =0; i< raceList[sel].armor_proficiencies.length; i++){
+				let box = document.createElement('li')
+				box.appendChild(document.createTextNode(raceList[sel].armor_proficiencies[i]))
+				profList.appendChild(box);
+			}
+			var optList = document.getElementById("opt")
+			//clear statlist
+			optList.innerHTML = ''
+			plist = []
+			for (var i =0; i< raceList[sel].tool_proficiency.options.length; i++){
+				let box = document.createElement('li')
+				let corpseweaver = document.createElement('input')
+				let ffs = raceList[sel].tool_proficiency.options[i]
+				corpseweaver.type = "checkbox"
+				corpseweaver.value = raceList[sel].tool_proficiency.options[i];
+				console.log(raceList[sel].tool_proficiency.options[i])
+				corpseweaver.onchange = function () {boxy(ffs)};
+				let orely = document.createTextNode(raceList[sel].tool_proficiency.options[i])
+				box.appendChild(orely)
+				box.appendChild(corpseweaver)
+				optList.appendChild(box);
+			}
+		
+			
+			
+			
 		}
 	</script>
   </head>
@@ -21,6 +94,12 @@
     </header>
 	<select id="races" onclick="raceSel()">
 	</select>
+	<h2> Abillity Score increases </h2>
+	<ul id="stats"> </ul>
+	<h2> Proficiencies </h2>
+	<ul id="prof"> </ul>
+	<h2> Optional Proficencies </h2>
+	<ul id="opt"> </ul>
 	<div id="traits"></div>
 	<script>
 		//Populate the race drop down menu
@@ -30,10 +109,11 @@
 			var cur = document.createElement('option')
 			cur.value = raceList[i].race_name
 			cur.innerHTML = raceList[i].race_name
-			cur.id = "opt" + raceList[i].race_name
+			//cur.id = "opt" + raceList[i].race_name
 			scroll.appendChild(cur)
 		}
 	</script>
-	<button style="background:blue; color:white"  id="raceDone" onclick="jumpAndSave('createHome.html','race',sel)" > Take Race </button> <br>
+	<!-- <button style="background:blue; color:white"  id="raceDone" onclick="jumpAndSave('createHome.html','race',sel)" > Take Race </button> <br> -->
+	<button style="background:blue; color:white"  id="raceDone" onclick="console.log(sel)" > Take Race </button> <br>
   </body>
 </html>
