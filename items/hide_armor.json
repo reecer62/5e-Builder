@@ -1,0 +1,13 @@
+
+		{"item_name": "hide_armor",
+			"type":"medium_armor",
+			"cost": "10gp",
+			"ac": [
+				{"base": "12",
+				"has_dex_max": "True",
+				"dex_max": "2"}
+			],
+			"has_str_min": "False",
+			"stealth_disadvantage": "False",
+			"weight": "12 lb."
+		}

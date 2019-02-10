@@ -1,0 +1,12 @@
+
+		{"item_name": "padded_armor",
+			"type":"light_armor",
+			"cost": "5gp",
+			"ac": [
+				{"base": "11",
+				"has_dex_max": "False"}
+			],
+			"has_str_min": "False",
+			"stealth_disadvantage": "True",
+			"weight": "8 lb."
+		}

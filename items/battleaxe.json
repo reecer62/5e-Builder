@@ -1,0 +1,13 @@
+{"item_name": "battleaxe",
+	"type":"martial_melee_weapon",
+	"cost": "10gp",
+	"damage": [
+		{"damage_type": "slashing",
+		"damage_dice": "1d8"
+		}
+	],
+	"weight": "4 lb.",
+	"properties": [
+		"versitile(d10)"
+	]
+}

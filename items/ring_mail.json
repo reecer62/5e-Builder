@@ -1,0 +1,13 @@
+
+		{"item_name": "ring_mail",
+			"cost": "30gp",
+			"type":"heavy_armor",
+			"ac": [
+				{"base": "14",
+				"has_dex_max": "True",
+				"dex_max": "0" }
+			],
+			"has_str_min": "False",
+			"stealth_disadvantage": "True",
+			"weight": "40 lb."
+		}
