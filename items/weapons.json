@@ -1,0 +1,454 @@
+
+{
+	"simple_melee_weapons": [
+		{"item_name": "club",
+			"cost": "1sp",
+			"damage": [
+				"damage_type": "bludgeoning",
+				"damage_dice": "1d4"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"light"
+			]
+		},
+		{"item_name": "dagger",
+			"cost": "2gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d4"
+			],
+			"weight": "1 lb.",
+			"properties": [
+				"light",
+				"finesse",
+				"thrown(20/60)"
+			]
+		},
+		{"item_name": "greatclub",
+			"cost": "2sp",
+			"damage": [
+				"damage_type": "bludgeoning",
+				"damage_dice": "1d8"
+			],
+			"weight": "10 lb.",
+			"properties": [
+				"two_handed"
+			]
+		},
+		{"item_name": "handaxe",
+			"cost": "5gp",
+			"damage": [
+				"damage_type": "slashing",
+				"damage_dice": "1d6"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"light",
+				"thrown(20/60)"
+			]
+		},
+		{"item_name": "javlin",
+			"cost": "5sp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d6"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"thrown(30/120)"
+			]
+		},
+		{"item_name": "light_hammer",
+			"cost": "2gp",
+			"damage": [
+				"damage_type": "bludgeoning",
+				"damage_dice": "1d4"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"light",
+				"thrown(20/60)"
+			]
+		},
+		{"item_name": "mace",
+			"cost": "5gp",
+			"damage": [
+				"damage_type": "bludgeoning",
+				"damage_dice": "1d6"
+			],
+			"weight": "4 lb.",
+			"properties": [
+			]
+		},
+		{"item_name": "quarterstaff",
+			"cost": "2sp",
+			"damage": [
+				"damage_type": "bludgeoning",
+				"damage_dice": "1d6"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"versitile(d8)"
+			]
+		},
+		{"item_name": "sickle",
+			"cost": "1gp",
+			"damage": [
+				"damage_type": "slashing",
+				"damage_dice": "1d4"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"light"
+			]
+		},
+		{"item_name": "spear",
+			"cost": "1gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d6"
+			],
+			"weight": "3 lb.",
+			"properties": [
+				"thrown(20/60)",
+				"versitile(d8)"
+			]
+		}
+	],
+	"simple_ranged_weapons": [
+		{"item_name": "light_crossbow",
+			"cost": "25gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d8"
+			],
+			"weight": "5 lb.",
+			"properties": [
+				"ammunition",
+				"ranged(80/320)",
+				"loading",
+				"two_handed"
+			]
+		},
+		{"item_name": "dart",
+			"cost": "5cp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d4"
+			],
+			"weight": "1/4 lb.",
+			"properties": [
+				"thrown(20/60)",
+				"finesse"
+			]
+		},
+		{"item_name": "shortbow",
+			"cost": "25gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d6"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"ammunition",
+				"ranged(80/320)",
+				"two_handed"
+			]
+		},
+		{"item_name": "sling",
+			"cost": "1sp",
+			"damage": [
+				"damage_type": "bludgeoning",
+				"damage_dice": "1d4"
+			],
+			"weight": "0 lb.",
+			"properties": [
+				"ammunition",
+				"ranged(30/120)"
+			]
+		}
+	],
+	"martial_melee_weapons": [
+		{"item_name": "battleaxe",
+			"cost": "10gp",
+			"damage": [
+				"damage_type": "slashing",
+				"damage_dice": "1d8"
+			],
+			"weight": "4 lb.",
+			"properties": [
+				"versitile(d10)"
+			]
+		},
+		{"item_name": "flail",
+			"cost": "10gp",
+			"damage": [
+				"damage_type": "bludgeoning",
+				"damage_dice": "1d8"
+			],
+			"weight": "2 lb.",
+			"properties": [
+			]
+		},
+		{"item_name": "glaive",
+			"cost": "20gp",
+			"damage": [
+				"damage_type": "slashing",
+				"damage_dice": "1d10"
+			],
+			"weight": "6 lb.",
+			"properties": [
+				"heavy",
+				"reach",
+				"two_handed"
+			]
+		},
+		{"item_name": "greataxe",
+			"cost": "30gp",
+			"damage": [
+				"damage_type": "slashing",
+				"damage_dice": "1d12"
+			],
+			"weight": "7 lb.",
+			"properties": [
+				"heavy",
+				"two-handed"
+			]
+		},
+		{"item_name": "greatsword",
+			"cost": "50gp",
+			"damage": [
+				"damage_type": "slashing",
+				"damage_dice": "2d6"
+			],
+			"weight": "6 lb.",
+			"properties": [
+				"heavy",
+				"two_handed"
+			]
+		},
+		{"item_name": "halberd",
+			"cost": "20gp",
+			"damage": [
+				"damage_type": "slashing",
+				"damage_dice": "1d10"
+			],
+			"weight": "6 lb.",
+			"properties": [
+				"heavy",
+				"reach",
+				"two_handed"
+			]
+		},
+		{"item_name": "lance",
+			"cost": "10gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d12"
+			],
+			"weight": "6 lb.",
+			"properties": [
+				"reach",
+				"special"
+			]
+		},
+		{"item_name": "longsword",
+			"cost": "15gp",
+			"damage": [
+				"damage_type": "slashing",
+				"damage_dice": "1d8"
+			],
+			"weight": "3 lb.",
+			"properties": [
+				"versitile(d10)"
+			]
+		},
+		{"item_name": "maul",
+			"cost": "10gp",
+			"damage": [
+				"damage_type": "bludgeoning",
+				"damage_dice": "2d6"
+			],
+			"weight": "10 lb.",
+			"properties": [
+				"heavy",
+				"two_handed"
+			]
+		},
+		{"item_name": "morningstar",
+			"cost": "15gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d8"
+			],
+			"weight": "4 lb.",
+			"properties": [
+			]
+		},
+		{"item_name": "pike",
+			"cost": "5gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d10"
+			],
+			"weight": "18 lb.",
+			"properties": [
+				"heavy",
+				"reach",
+				"two_handed"
+			]
+		},
+		{"item_name": "rapier",
+			"cost": "25gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d8"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"Finesse"
+			]
+		},
+		{"item_name": "scimatar",
+			"cost": "25gp",
+			"damage": [
+				"damage_type": "slashing",
+				"damage_dice": "1d6"
+			],
+			"weight": "3 lb.",
+			"properties": [
+				"finesse",
+				"light"
+			]
+		},
+		{"item_name": "shortsword",
+			"cost": "10gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d6"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"finesse",
+				"light"
+			]
+		},
+		{"item_name": "trident",
+			"cost": "5gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d6"
+			],
+			"weight": "4 lb.",
+			"properties": [
+				"thrown(20/60)",
+				"versitile(d8)"
+			]
+		},
+		{"item_name": "war_pick",
+			"cost": "5gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d8"
+			],
+			"weight": "2 lb.",
+			"properties": [
+			]
+		},
+		{"item_name": "warhammer",
+			"cost": "15gp",
+			"damage": [
+				"damage_type": "bludgeoning",
+				"damage_dice": "1dd8"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"versitile(d10)"
+			]
+		},
+		{"item_name": "whip",
+			"cost": "2gp",
+			"damage": [
+				"damage_type": "slashing",
+				"damage_dice": "1d4"
+			],
+			"weight": "3 lb.",
+			"properties": [
+				"finesse",
+				"thrown"
+			]
+		}
+	],
+	"martial_ranged_weapons": [
+		{"item_name": "blowgun",
+			"cost": "10gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1"
+			],
+			"weight": "1 lb.",
+			"properties": [
+				"ammunition",
+				"ranged(25/100)",
+				"loading"
+			]
+		},
+		{"item_name": "hand_crossbow",
+			"cost": "75gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d6"
+			],
+			"weight": "3 lb.",
+			"properties": [
+				"ammunition",
+				"light",
+				"ranged(30/120)",
+				"loading"
+			]
+		},
+		{"item_name": "heavy_crossbow",
+			"cost": "50gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d10"
+			],
+			"weight": "18 lb.",
+			"properties": [
+				"ammunition",
+				"heavy",
+				"ranged(100/400)",
+				"two_handed",
+				"loading"
+			]
+		},
+		{"item_name": "longbow",
+			"cost": "50gp",
+			"damage": [
+				"damage_type": "piercing",
+				"damage_dice": "1d8"
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"ammunition",
+				"heavy",
+				"ranged(150/600)",
+				"two_handed",
+				"loading"
+			]
+		},
+		{"item_name": "net",
+			"cost": "1gp",
+			"damage": [
+				"damage_type": "none",
+				"damage_dice": "0"
+			],
+			"weight": "3 lb.",
+			"properties": [
+				"special",
+				"thrown(5/15)"
+			]
+		}
+	]
+}
