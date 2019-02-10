@@ -17,5 +17,13 @@
 	<button style="background:blue; color:white"  id="makeDesciption" onclick='jump("createDescription.html")'> Description </button> <br>
 	<button style="background:blue; color:white"  id="makeEquitment" onclick='jump("createEquitment.html")'> Equitment </button> <br>
 	<button style="background:blue; color:white" hidden=true  id="makeDone" onclick='finnaMakeChar()'> Done </button> <br>
+	<script>
+		let race = localStorage.getItem("race")
+		console.log(race)
+		if (!!race){
+			let kokolo = document.getElementById("makeRace")
+			kokolo.style = "background:green; color:white"
+		}
+	</script>
   </body>
 </html>

@@ -8,6 +8,11 @@
 	<script>
 		var sel;
 		var plist;
+		
+		function exodus(){
+			localStorage.setItem("classProf",plist)
+			jumpAndSave('createHome.html','race',sel)
+		}
 
 		function boxy(val){
 			let mao = loadDir("./races")[sel].tool_proficiency
@@ -16,7 +21,6 @@
 			plist =[]
 			for (var i =0;i<cheks.length;i++){
 				if ( funbox >= mao.num && !(cheks[i].value === val)){
-					console.log("Uncheking " + cheks[i].value + " copares: " + val)
 					cheks[i].checked = false;
 				} else if (cheks[i].checked && !(cheks[i].value === val)){
 					plist.push(mao.options[i])
@@ -135,6 +139,6 @@
 			scroll.appendChild(cur)
 		}
 	</script>
-	<button style="background:blue; color:white"  id="raceDone" onclick="jumpAndSave('createHome.html','race',sel)" > Take Race </button> <br>
+	<button style="background:blue; color:white"  id="raceDone" onclick="exodus()" > Take Race </button> <br>
   </body>
 </html>
