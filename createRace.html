@@ -80,6 +80,25 @@
 				box.appendChild(corpseweaver)
 				optList.appendChild(box);
 			}
+			var langList = document.getElementById("lang")
+			//clear statlist
+			langList.innerHTML = ''
+			for (var i =0;i < raceList[sel].languages.length;i++){
+				let box = document.createElement('li')
+				box.appendChild(document.createTextNode(raceList[sel].languages[i]))
+				langList.appendChild(box);
+			}
+			var featList = document.getElementById("feats")
+			featList.innerHTML = ''
+			for (var i =0;i < raceList[sel].feats.length;i++){
+				let t = document.createElement("h3")
+				t.innerHTML = raceList[sel].feats[i].feat
+				let box = document.createElement("div")
+				let des = document.createTextNode(raceList[sel].feats[i].description)
+				box.appendChild(t)
+				box.appendChild(des)
+				featList.appendChild(box)
+			}
 		
 			
 			
@@ -100,7 +119,10 @@
 	<ul id="prof"> </ul>
 	<h2> Optional Proficencies </h2>
 	<ul id="opt"> </ul>
-	<div id="traits"></div>
+	<h2> Traits </h2>
+	<div id="feats"></div>
+	<h2> languages </h2>
+	<ul id="lang"> </ul>
 	<script>
 		//Populate the race drop down menu
 		var scroll = document.getElementById("races");
@@ -113,7 +135,6 @@
 			scroll.appendChild(cur)
 		}
 	</script>
-	<!-- <button style="background:blue; color:white"  id="raceDone" onclick="jumpAndSave('createHome.html','race',sel)" > Take Race </button> <br> -->
-	<button style="background:blue; color:white"  id="raceDone" onclick="console.log(sel)" > Take Race </button> <br>
+	<button style="background:blue; color:white"  id="raceDone" onclick="jumpAndSave('createHome.html','race',sel)" > Take Race </button> <br>
   </body>
 </html>
