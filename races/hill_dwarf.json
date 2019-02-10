@@ -28,7 +28,7 @@
 		{"feat":"Stonecunning","description": "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."},
 		{"feat":"Dwarven Toughness.","description": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."}
 	],
-	"tool_proficiency": "one of your choice from smith's tools, brewer's supplies, or mason's tools.",
+	"tool_proficiency": {"number":"1","options":["smiths tools", "brewers supplies", "mason's tools"],
 	"languages": [
 		"dwarvish",
 		"common"
