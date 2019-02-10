@@ -25,6 +25,12 @@
 			let kokolo = document.getElementById("makeRace")
 			kokolo.style = "background:green; color:white"
 		}
+		let cha = localStorage.getItem("cha")
+		console.log(cha)
+		if (!!cha){
+			let kokolo = document.getElementById("makeScores")
+			kokolo.style = "background:green; color:white"
+		}
 	</script>
   </body>
 </html>

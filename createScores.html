@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>5e Builder</title>
+	<script type="text/javascript" src="loadDir.js"></script>
+	<script type="text/javascript" src="jump.js"></script>
+	<script type="text/javascript" src="makeChar.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1> Abillity scores</h1>
+		Strength: <input type="number" id="strength"> <br>
+		Dexterity: <input type="number" id="dexterity"> <br>
+		Constitution: <input type="number" id="constitution"> <br>
+		Intelligence: <input type="number" id="intelligence"> <br>
+		Wisdom: <input type="number" id="wisdom"> <br>
+		Charisma: <input type="number" id="charisma"> <br>
+		<button id="fiinishScores" onclick='exodus()'> Confirm Scores </button>
+		<script>
+			function exodus(){
+				let str = document.getElementById("strength").value
+				let dex = document.getElementById("dexterity").value
+				let cons = document.getElementById("constitution").value
+				let intel = document.getElementById("intelligence").value
+				let wis = document.getElementById("wisdom").value
+				let cha = document.getElementById("charisma").value
+				//var koropos = {"str":str, "dex":dex,"cons":cons,"intel":intel,"wis":wis,"cha":cha }
+				//jumpAndSave("createHome.html","stats",koropos.toString())
+				localStorage.setItem("str",str)
+				localStorage.setItem("dex",dex)
+				localStorage.setItem("cons",cons)
+				localStorage.setItem("intel",intel)
+				localStorage.setItem("wis",wis)
+				jumpAndSave("createHome.html","cha",cha)
+			}
+		</script>
+    </header>
+  </body>
+</html>
