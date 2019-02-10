@@ -9,25 +9,12 @@ body {
     text-align: center;
 }
 
-p {
-    margin-bottom: .67em;
-}
-
 ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-transform: capitalize;
-}
-
-header > p {
-    padding: 1.0em;
-}
-
-#main section {
-    margin: 1.0em;
-    margin-bottom: 2.0em;
 }
 
 li {
@@ -64,4 +51,8 @@ h1, h2 {
 label {
     margin-right: 1.0em;
     text-transform: capitalize;
+}
+
+h4 {
+    margin-top: 1.0em;
 }
