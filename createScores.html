@@ -26,14 +26,16 @@
 				let intel = document.getElementById("intelligence").value
 				let wis = document.getElementById("wisdom").value
 				let cha = document.getElementById("charisma").value
-				//var koropos = {"str":str, "dex":dex,"cons":cons,"intel":intel,"wis":wis,"cha":cha }
+				var koropos = {"str":str, "dex":dex,"cons":cons,"intel":intel,"wis":wis,"cha":cha }
+				localStorage['stats'] = JSON.stringify(koropos);
+				jump("createHome.html")
 				//jumpAndSave("createHome.html","stats",koropos.toString())
-				localStorage.setItem("str",str)
+				/*localStorage.setItem("str",str)
 				localStorage.setItem("dex",dex)
 				localStorage.setItem("cons",cons)
 				localStorage.setItem("intel",intel)
-				localStorage.setItem("wis",wis)
-				jumpAndSave("createHome.html","cha",cha)
+				localStorage.setItem("wis",wis) */	
+				//jumpAndSave("createHome.html","cha",cha)
 			}
 		</script>
     </header>
