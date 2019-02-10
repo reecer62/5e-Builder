@@ -74,3 +74,7 @@ button {
 h1, h2, h3, h4 {
     text-transform: capitalize;
 }
+
+h1, h2 {
+    margin-bottom: 0.5em;
+}
