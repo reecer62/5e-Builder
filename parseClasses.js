@@ -233,8 +233,10 @@ function submitClass() {
             skillProfAry.push(checkboxes[i].value)
         }
     }
-    if (numChecked < numSkillsRequired) {
+    if ((numChecked < numSkillsRequired) || (numChecked == 0)) {
         console.log("Please select skills to be proficient in.")
+        localStorage.setItem('skillProficiencies', [])
+        localStorage.setItem('isDoneClass', false)
     } else {
         // Load necessary variables into localStorage
         localStorage.setItem('skillProficiencies', skillProfAry)
