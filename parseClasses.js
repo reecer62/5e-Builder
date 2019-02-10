@@ -132,7 +132,38 @@ function parseClasses (classes) {
         }
 
         // Features
-        
+        var featuresHeader = document.createElement("h3")
+        featuresHeader.textContent = "Class Features"
+        infoSection.append(featuresHeader)
+        var featureList = document.createElement("ul")
+        var featuresObj = clas.class_features
+        for (let i = 0; i < featuresObj.length; i++) {
+            var hasOptions = featuresObj[i].options || 0
+            if (hasOptions != 0) {
+                // console.log(featuresObj[i]) 
+            } else {
+                var featureSection = document.createElement("li")
+                // Feature name
+                var featHeader = document.createElement("h4")
+                featHeader.textContent = "Feature: " + featuresObj[i].feature
+                featureSection.appendChild(featHeader)
+                // Feature description
+                var featDesc = document.createElement("p")
+                featDesc.textContent = featuresObj[i].description
+                featureSection.appendChild(featDesc)
+                // Feature level
+                var featLevel = document.createElement("p")
+                featLevel.textContent = "Level: " + featuresObj[i].level
+                featureSection.appendChild(featLevel)
+                // Feature subclass
+                var featSubclass = document.createElement("p")
+                featSubclass.textContent = "Subclass: " + featuresObj[i].subclass
+                featureSection.append(featSubclass)
+                // Append feature info to feature list
+                featureList.appendChild(featureSection)
+            }
+        }
+        infoSection.append(featureList)
 
     })
 }
