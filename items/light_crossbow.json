@@ -1,0 +1,16 @@
+
+		{"item_name": "light_crossbow",
+			"type":"simple_ranged_weapon",
+			"cost": "25gp",
+			"damage": [
+				{"damage_type": "piercing",
+				"damage_dice": "1d8"}
+			],
+			"weight": "5 lb.",
+			"properties": [
+				"ammunition",
+				"ranged(80/320)",
+				"loading",
+				"two_handed"
+			]
+		}

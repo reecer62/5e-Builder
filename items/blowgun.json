@@ -1,0 +1,15 @@
+
+		{"item_name": "blowgun",
+			"type":"marital_ranged_weapon",
+			"cost": "10gp",
+			"damage": [
+				{"damage_type": "piercing",
+				"damage_dice": "1"}
+			],
+			"weight": "1 lb.",
+			"properties": [
+				"ammunition",
+				"ranged(25/100)",
+				"loading"
+			]
+		}

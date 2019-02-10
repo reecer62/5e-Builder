@@ -1,0 +1,14 @@
+
+		{"item_name": "club",
+			"type":"simple_melee",
+			"cost": "1sp",
+			"damage": [
+				{"damage_type": "bludgeoning",
+				"damage_dice": "1d4"
+				}
+			],
+			"weight": "2 lb.",
+			"properties": [
+				"light"
+			]
+		}

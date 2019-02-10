@@ -1,0 +1,12 @@
+
+		{"item_name": "shield",
+			"cost": "10gp",
+			"ac": [
+				{"base": "2",
+				"has_dex_max": "True",
+				"dex_max": "0"}
+			],
+			"has_str_min": "False",
+			"stealth_disadvantage": "False",
+			"weight": "6 lb."
+		}
