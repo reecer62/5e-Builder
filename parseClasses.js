@@ -223,7 +223,7 @@ function makeFeatureSection(featureObj) {
     return featureSection
 }
 
-function submitClass() {
+function submitClass(classes) {
     var skillProfAry = []
     var numChecked = 0
     var checkboxes = document.querySelectorAll('input[type=checkbox]')
@@ -237,10 +237,13 @@ function submitClass() {
         console.log("Please select skills to be proficient in.")
         localStorage.setItem('skillProficiencies', [])
         localStorage.setItem('isDoneClass', false)
+        localStorage.setItem("chosenClass", "")
     } else {
         // Load necessary variables into localStorage
         localStorage.setItem('skillProficiencies', skillProfAry)
         localStorage.setItem('isDoneClass', true)
+        var classList = document.getElementById("classList")
+        localStorage.setItem("chosenClass", classes[classList.value].class_name)
         // Load back to character creation menu
         document.location.href = "createHome.html"
     }
