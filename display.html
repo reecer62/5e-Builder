@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>5e Builder</title>
+    <script type="text/javascript" src="loadDir.js"></script>
+    <script type="text/javascript" src="parseChars.js"></script>
+	<script type="text/javascript" src="display.js"></script>
+    <!-- <link rel="stylesheet" href="css/mini_reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=UnifrakturCook:700');
+    </style> 
+  </head>
+  <body>
+
+    <h1 id="pname"></h1>
+	<!-- This is the area that tells us about them -->
+	 <span id="race"> </span>
+	 <span id="class"> </span>
+	<h2> Stats and Modifiers </h2>
+	<table style="width:100%">
+		<tr>
+			<th> Strength </th>
+			<th> Dexterity </th>
+			<th> Constitution </th>
+			<th> Intelligence </th>
+			<th> Wisdom </th>
+			<th> Charisma </th>
+		</tr>
+		<tr>
+			<th id="str"> </th>
+			<th id="dex"> </th>
+			<th id="cons"> </th>
+			<th id="intel"> </th>
+			<th id="wis"> </th>
+			<th id="cha"> </th>
+		</tr>
+		<script>
+			var chList = loadDir("./characters")
+			var sel = localStorage.getItem('charIndex')
+			populateStats(chList[sel])
+		</script>
+  </body>
+</html>
