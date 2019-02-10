@@ -1,0 +1,6 @@
+{
+"background":"Acolyte",
+"proficiency": [ "insight", "religion"],
+"languages": {"num":2, "options": ["check boxes","again","why me"] },
+"feature" : {"feat":"Shelter of the Faithful", "description": "your a resligous person"}
+}

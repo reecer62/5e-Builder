@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>5e Builder</title>
+	<script type="text/javascript" src="loadDir.js"></script>
+	<script type="text/javascript" src="jump.js"></script>
+	<script type="text/javascript" src="makeChar.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <h1> Abillity scores</h1>
+		Name: <input type="text" id="name"> <br>
+		Gender: <input type="text" id="gender"> <br>
+		Height: <input type="number" id="height"> <br>
+		Weight: <input type="number" id="weight"> <br>
+		Alignment: <input type="text" id="alignment"> <br>
+		<select id="backgrounds" onclick="ray()"></select> <br>
+		<h2> Proficiencies </h2>
+		<ul id="prof"> </ul>
+		<h2> Languages </h2>
+		<ul id="lang"> </ul>
+		<div id="feats"> </div>
+		<button id="finishDescription" onclick='exodus()'> Confirm Scores </button>
+		<script>
+			var scroll = document.getElementById("backgrounds")
+			var backList = loadDir("./background")
+			var sel;
+			var langList = [];
+			for (var i =0;i< backList.length;i++){
+				var cur = document.createElement('option')
+				cur.value = backList[i].background
+				cur.innerHTML = backList[i].background
+				scroll.appendChild(cur)
+			}
+			function exodus(){
+				let name = document.getElementById("name").value
+				let gender = document.getElementById("gender").value
+				let height = document.getElementById("height").value
+				let weight = document.getElementById("weight").value
+				let alignment = document.getElementById("alignment").value
+				var koropos = {"name":name, "gender":gender,"height":height,"weight":weight,"alignment":alignment, "background":sel, "lang":langList }
+				localStorage['desc'] = JSON.stringify(koropos);
+				jump("createHome.html")
+			}
+			function ray(){
+				var backVal = document.getElementById("backgrounds").value
+				for(var i =0; i< backList.length;i++){
+					if (backVal === backList[i].background){
+						sel = i
+						break
+					}
+				}
+				var profList = document.getElementById('prof')
+				for (var i =0; i<backList[sel].proficiency.length;i++){
+					let box = document.createElement('li')
+					box.appendChild(document.createTextNode(backList[sel].proficiency[i]))
+					profList.appendChild(box)
+				}
+			langList = []
+			var optList = document.getElementById("lang")
+			optList.innerHTML = ''
+			for (var i =0; i< backList[sel].languages.options.length; i++){
+				let box = document.createElement('li')
+				let corpseweaver = document.createElement('input')
+				let ffs = backList[sel].languages.options[i]
+				corpseweaver.type = "checkbox"
+				corpseweaver.value = backList[sel].languages.options[i];
+				console.log(backList[sel].languages.options[i])
+				corpseweaver.onchange = function () {boxy(ffs)};
+				let orely = document.createTextNode(backList[sel].languages.options[i])
+				box.appendChild(orely)
+				box.appendChild(corpseweaver)
+				optList.appendChild(box);
+			}
+			var featList = document.getElementById("feats")
+				featList.innerHTML = ''
+				let t = document.createElement("h3")
+				t.innerHTML = backList[sel].feature.feat
+				let box = document.createElement("div")
+				let des = document.createTextNode(backList[sel].feature.description)
+				box.appendChild(t)
+				box.appendChild(des)
+				featList.appendChild(box)
+				
+			}
+		function boxy(val){
+			let mao = loadDir("./background")[sel].languages
+			let funbox = 1
+			let cheks = document.getElementsByTagName("input")
+			langList =[]
+			for (var i =0;i<cheks.length;i++){
+				if( cheks[i].type !== "checkbox"){
+					continue;
+				}
+				if ( funbox >= mao.num && !(cheks[i].value === val)){
+					cheks[i].checked = false;
+				} else if (cheks[i].checked && !(cheks[i].value === val)){
+					langList.push(mao.options[i])
+					funbox++;
+				} else if (mao.options[i] === val){
+					langList.push(mao.options[i])
+				}
+			}
+		}
+		</script>
+    </header>
+  </body>
+</html>

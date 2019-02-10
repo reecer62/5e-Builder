@@ -1,0 +1,6 @@
+{
+"background":"Pyrom",
+"proficiency": [ "insight", "religion"],
+"languages": {"num":2, "options": ["check boxes","again","why me"]},
+"feature" : {"feat":"burn the Faithful", "description": "Fire is fun"}
+}
