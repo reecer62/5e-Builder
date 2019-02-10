@@ -16,7 +16,7 @@
     </header>
 	<!-- <p> Cost: <span id="total"> weight: <span id="weigh"> </p> -->
 	<ul id="eList"> </ul>
-	<button style="background:blue; color:white"  id="equitmentDone" onclick="exodus()" > Take Race </button> <br>
+	<button style="background:blue; color:white"  id="equitmentDone" onclick="exodus()" > Take Equitment </button> <br>
 	<script>
 		var eList = loadDir("./items")
 		for (var i =0;i < eList.length;i++){
@@ -25,7 +25,7 @@
 			let chungus = document.createElement("input")
 			chungus.type = "checkbox"
 			chungus.id = "id" + eList[i].item_name
-			cur.appendChild(document.createTextNode(eList[i].item_name + ":" + eList[i].cost + (typeof eList[i].damage !=="undefined" ? "Damage: " + eList[i].damage[0].damage_dice : "AC: " + eList[i].ac[0].base)))
+			cur.appendChild(document.createTextNode(eList[i].item_name + ":" + eList[i].cost + (typeof eList[i].damage !=="undefined" ? " Damage: " + eList[i].damage[0].damage_dice : " AC: " + eList[i].ac[0].base)))
 			cur.appendChild(chungus)
 			pika.appendChild(cur)
 		}
