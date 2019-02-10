@@ -4,9 +4,7 @@
 	"hit_die": "d10",
 	"armor_proficiencies": [
 		{"light": "True"},
-		{"medium": "True"},
-		{"heavy": "True"},
-		{"shields": "True"}
+		{"medium": "True"}
 	],
 	"weapon_proficiencies": [
 		{"simple": "True"},
