@@ -5,6 +5,7 @@
     <title>5e Builder</title>
 	<script type="text/javascript" src="loadDir.js"></script>
 	<script type="text/javascript" src="jump.js"></script>
+	<script type="text/javascript" src="makeChar.js"></script>
   </head>
   <body>
 
@@ -22,6 +23,12 @@
 		console.log(race)
 		if (!!race){
 			let kokolo = document.getElementById("makeRace")
+			kokolo.style = "background:green; color:white"
+		}
+		let cha = localStorage.getItem("stats")
+		console.log(cha)
+		if (!!cha){
+			let kokolo = document.getElementById("makeScores")
 			kokolo.style = "background:green; color:white"
 		}
 	</script>
