@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <title>5e Builder</title>
 	<script type="text/javascript" src="loadDir.js"></script>
+	<script type="text/javascript" src="jump.js"></script>
+	<script>
+		var sel;
+		function raceSel() {
+			sel = document.getElementById("races").value
+			console.log(sel)
+
+		}
+	</script>
   </head>
   <body>
 
     <header>
       <h1>Character Creation</h1>
     </header>
-	<select id="races">
+	<select id="races" onclick="raceSel()">
 	</select>
 	<div id="traits"></div>
 	<script>
@@ -21,9 +30,10 @@
 			var cur = document.createElement('option')
 			cur.value = raceList[i].race_name
 			cur.innerHTML = raceList[i].race_name
+			cur.id = "opt" + raceList[i].race_name
 			scroll.appendChild(cur)
 		}
 	</script>
-	<button style="background:blue; color:white"  id="raceDone" onclick="createHome.html" > Done </button> <br>
+	<button style="background:blue; color:white"  id="raceDone" onclick="jumpAndSave('createHome.html','race',sel)" > Take Race </button> <br>
   </body>
 </html>
