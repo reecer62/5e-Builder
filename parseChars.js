@@ -28,7 +28,8 @@ function parseChars(characters) {
         linkNode.innerHTML = charString
         // Add localStorage value to store what character was selected
         linkNode.addEventListener("click", function () {
-            localStorage.setItem('charIndex', i)
+           	localStorage.setItem('charIndex', i)
+			document.location.href = "display.html"
         })
         listNode.append(spanNode)
         listNode.append(linkNode)
