@@ -60,8 +60,8 @@ function finnaMakeChar(){
 	})
 
 	//Do last
-	//localStorage.clear();
 	var fs = require('fs');
 	fs.writeFileSync("./characters/" + play.name + ".json",JSON.stringify(play), {flag:"w+"})
+	localStorage.clear();
 	jump("index.html")
 }
